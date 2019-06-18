@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityCliente.EditClientActivity">
+
+    <TextView
+        android:id="@+id/tvPrestamos"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="Solicitud de Prestamo"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textSize="30sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvRegistro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="8dp"
+        android:text="Registro de Cliente"
+        android:textColor="@color/colorAccent"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvPrestamos" />
+
+    <TextView
+        android:id="@+id/tvNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:text="Nombre*"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvRegistro" />
+
+    <TextView
+        android:id="@+id/tvApellido"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Apellido"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.324"
+        app:layout_constraintStart_toEndOf="@id/tvNombre"
+        app:layout_constraintTop_toBottomOf="@+id/tvRegistro" />
+
+    <EditText
+        android:id="@+id/eteNombre"
+        android:layout_width="170dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/etApellido"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/tvNombre"
+        app:layout_constraintTop_toBottomOf="@id/tvNombre" />
+
+    <EditText
+        android:id="@+id/eteApellido"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintStart_toStartOf="@+id/tvApellido"
+        app:layout_constraintTop_toBottomOf="@+id/tvApellido" />
+
+
+    <TextView
+        android:id="@+id/tvSexo"
+        android:layout_width="58dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="32dp"
+        android:text="Sexo"
+        app:layout_constraintStart_toStartOf="@+id/eteNombre"
+        app:layout_constraintTop_toBottomOf="@+id/eteNombre" />
+
+    <TextView
+        android:id="@+id/tvTelefono"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginEnd="8dp"
+        android:text="Telefono*"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/eteApellido"
+        app:layout_constraintTop_toBottomOf="@+id/eteApellido" />
+
+    <Spinner
+        android:id="@+id/speSexo"
+        android:entries="@array/Sexo"
+        android:layout_width="169dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@id/tvSexo"
+        app:layout_constraintTop_toBottomOf="@id/tvSexo"/>
+
+    <EditText
+        android:id="@+id/eteTelefono"
+        android:layout_width="169dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="@+id/tvTelefono"
+        app:layout_constraintTop_toBottomOf="@id/tvTelefono" />
+
+    <TextView
+        android:id="@+id/tvCedula"
+        android:layout_width="68dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="32dp"
+        android:text="Cedula*"
+        app:layout_constraintStart_toStartOf="@+id/speSexo"
+        app:layout_constraintTop_toBottomOf="@+id/speSexo" />
+
+    <EditText
+        android:id="@+id/eteCedula"
+        android:layout_width="359dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="@+id/tvCedula"
+        app:layout_constraintTop_toBottomOf="@id/tvCedula" />
+
+    <TextView
+        android:id="@+id/tvOcupacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Ocupacion"
+        app:layout_constraintStart_toStartOf="@+id/eteCedula"
+        app:layout_constraintTop_toBottomOf="@id/eteCedula" />
+
+    <EditText
+        android:id="@+id/eteOcupacion"
+        android:layout_width="364dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/tvOcupacion"
+        app:layout_constraintTop_toBottomOf="@id/tvOcupacion" />
+
+    <TextView
+        android:id="@+id/tvDireccion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="Direccion*"
+        app:layout_constraintStart_toStartOf="@+id/eteOcupacion"
+        app:layout_constraintTop_toBottomOf="@+id/eteOcupacion" />
+
+    <EditText
+        android:id="@+id/eteDireccion"
+        android:layout_width="363dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@+id/tvDireccion"
+        app:layout_constraintTop_toBottomOf="@id/tvDireccion" />
+
+</android.support.constraint.ConstraintLayout>
